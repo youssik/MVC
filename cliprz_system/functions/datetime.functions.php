@@ -236,5 +236,54 @@ if (!function_exists('c_short_month'))
 }
 
 
+if (!function_exists('timeago'))
+{
+    /**
+     * Convert Time To Ago 
+     *														 Y   M  D  H  M 
+     * @param (string) $time = the time should be like this 2009-03-04 17:45 .
+     */
+      
+	  function c_time_ago($time)  
+    {
+		
+	 if(empty($time)) {
+			return c_lang('not-valid-date');
+		}
+		
+		$periods         = array(c_lang('second'), c_lang('minute'), c_lang('hour'), c_lang('day'), c_lang('week'), c_lang('month'), c_lang('year'), c_lang('decade'));
+		$lengths         = array("60","60","24","7","4.35","12","10");
+		
+		$now             = time();
+		$unix_date       = strtotime($time);
+		
+		   // check validity of date
+		if(empty($unix_date)) {    
+			return c_lang('bad-date');
+		}
+	
+		// is it future date or past date
+		if($now > $unix_date) {    
+			$difference     = $now - $unix_date;
+			$tense         = c_lang('ago');
+			
+		} else {
+			$difference     = $unix_date - $now;
+			$tense         = c_lang('from-now');
+		}
+		
+		for($j = 0; $difference >= $lengths[$j] && $j < count($lengths)-1; $j++) {
+			$difference /= $lengths[$j];
+		}
+		
+		$difference = round($difference);
+		
+		if($difference != 1) {
+			$periods[$j].= c_lang('s');
+		}
+		
+		return "$difference $periods[$j] {$tense}";    	  
+    }
+}
 
 ?>
