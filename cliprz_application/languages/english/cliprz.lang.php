@@ -79,6 +79,27 @@ $_lang['c_oct'] = "Oct";
 $_lang['c_nov'] = "Nov";
 $_lang['c_dec'] = "Dec";
 
+//ago function language
+$_lang['ago'] = "ago";
+$_lang['from-now'] = "From Now";
+$_lang['not-valid-date'] = "No Date Provided";
+$_lang['bad-date'] = "Bad Date";
+$_lang['s'] = "s";
+
+//times language
+$_lang['second'] = "Second";
+$_lang['minute'] = "Minute";
+$_lang['hour'] = "Hour";
+$_lang['day'] = "Day";
+$_lang['week'] = "Week";
+$_lang['month'] = "Month";
+$_lang['year'] = "Year";
+$_lang['decade'] = "Decade";
+
+//times array
+//$_lang['time-array'] = array("Second", "Minute", "Hour", "Day", "Week", "Month", "Year", "Decade");
+
+
 // recaptcha
 /* Removed By Albert (Negix)
 $_lang['c_recaptcha'] = array(
