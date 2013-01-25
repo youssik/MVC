@@ -224,8 +224,17 @@ if (!function_exists('c_short_month'))
      */
     function c_short_month($month)
     {
-        return ucfirst(c_mb_substr($month,0,3));
+    	$months = array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December", );
+		if (in_array($month, $months))
+        {
+            return ucfirst(c_mb_substr($month,0,3));
+		}else 
+		{
+			return "Bad Month Provided";
+		}
     }
 }
+
+
 
 ?>
