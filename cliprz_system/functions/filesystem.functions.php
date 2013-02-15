@@ -145,6 +145,28 @@ if (!function_exists('c_mkdir'))
     }
 }
 
+
+if (!function_exists('c_file_exists'))
+{
+    /**
+     * Check If File Exists Or Not
+     *
+     * @param (string) $filename - file name and path.
+     */
+    function c_file_exists ($filename)
+    {
+            if (file_exists($filename))
+            {
+                return c_lang('c_file_exist');
+            }
+            else
+            {
+                return c_lang('c_file_not_exist');
+            }
+        }
+}
+
+
 if (!function_exists('c_all_files'))
 {
     /**
