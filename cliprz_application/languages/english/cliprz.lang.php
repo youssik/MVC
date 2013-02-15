@@ -115,6 +115,9 @@ $_lang['c_pg_adjacent'] = "&hellip;";
 $_lang['c_pg_next']     = "Next &raquo;";
 $_lang['c_pg_last']     = "Last &raquo;";
 
+//file exsist function
+$_lang['c_file_exist']     = "The File Is Exist";
+$_lang['c_file_not_exist']     = "The File Is NOT Exist";
 
 // recaptcha
 /* Removed By Albert (Negix)
